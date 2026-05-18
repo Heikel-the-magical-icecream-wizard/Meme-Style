@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Style - Buscador de Memes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes de Google: Outfit y Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="ph-fill ph-ice-cream"></i>
+                <div>
+                    <span>Meme Style</span>
+                    <p class="byline">By Heikel Icecream Wizard</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button id="nav-home" class="nav-btn active"><i class="ph ph-trend-up"></i> Tendencias</button>
+                <button id="nav-favs" class="nav-btn"><i class="ph ph-heart"></i> Favoritos</button>
+                <button id="nav-edit" class="nav-btn"><i class="ph ph-pencil"></i> Editar meme</button>
+                <button id="nav-translate" class="nav-btn" style="cursor:pointer;"><i class="ph ph-globe"></i> Translate</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1>Encuentra el meme <span class="highlight">perfecto</span> con Meme Style</h1>
+            <p>Explora memes rápidos, elegantes y listos para descargar.</p>
+            
+            <div class="search-container glass">
+                <i class="ph ph-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Buscar por nombre, emoción, aspecto..." autocomplete="off">
+                <button id="search-btn" class="icon-btn"><i class="ph ph-magnifying-glass"></i></button>
+                <button id="clear-search" class="icon-btn hidden"><i class="ph ph-x"></i></button>
+            </div>
+        </header>
+
+        <section id="content-section">
+            <div class="section-header">
+                <div class="header-title-group">
+                    <h2 id="section-title">Tendencias Actuales</h2>
+                    <span id="results-count">Cargando...</span>
+                </div>
+                <button id="refresh-memes" class="secondary-btn hidden"><i class="ph ph-arrow-clockwise"></i> Refrescar</button>
+            </div>
+            
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+                <p>Analizando algoritmos...</p>
+            </div>
+
+            <div id="meme-grid" class="meme-grid hidden">
+                <!-- Las tarjetas de memes se insertarán aquí por JS -->
+            </div>
+
+            <div id="empty-state" class="empty-state hidden">
+                <i class="ph ph-ghost"></i>
+                <h3>No se encontraron memes</h3>
+                <p>Intenta con otras palabras clave.</p>
+            </div>
+        </section>
+
+        <section id="editor-section" class="editor-section glass hidden">
+            <div class="editor-header">
+                <div>
+                    <h2>Editar meme</h2>
+                    <p>Selecciona un meme favorito y agrega un texto personalizado para descargarlo.</p>
+                </div>
+                <button id="editor-reset" class="secondary-btn"><i class="ph ph-x-square"></i> Limpiar</button>
+            </div>
+            <div class="editor-grid">
+                <div class="editor-preview">
+                    <canvas id="edit-canvas" width="600" height="380"></canvas>
+                    <p class="editor-caption">Meme favorito seleccionado</p>
+                </div>
+                <div class="editor-controls">
+                    <div class="text-inputs-container">
+                        <div class="text-input-group">
+                            <label for="edit-top-text">Texto superior</label>
+                            <input id="edit-top-text" type="text" placeholder="Texto superior..." maxlength="40">
+                        </div>
+                        <div class="text-input-group">
+                            <label for="edit-bottom-text">Texto inferior</label>
+                            <input id="edit-bottom-text" type="text" placeholder="Texto inferior..." maxlength="40">
+                        </div>
+                    </div>
+                    <button id="translate-text" class="secondary-btn" type="button"><i class="ph ph-globe"></i> Translate</button>
+                    <div id="translation-output" class="translation-output hidden"></div>
+                    <button id="download-edited" class="primary-btn" disabled><i class="ph ph-download"></i> Descargar meme editado</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="ph-fill ph-ice-cream"></i>
+            </div>
+            <div class="footer-text">
+                <h3>Meme Style</h3>
+                <p>Created by Heikel Icecream Wizard</p>
+                <p class="footer-year">© 2026 - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Meme Style.js"></script>
+</body>
+</html>
