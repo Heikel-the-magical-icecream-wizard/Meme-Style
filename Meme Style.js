@@ -483,7 +483,7 @@ async function renderEditor() {
         const bottomText = editBottomTextInput.value.trim();
         const hasText = topText || bottomText;
 
-        translateBtn.disabled = !hasText;
+        translateBtnEditor.disabled = !hasText;
 
         if (hasText) {
             context.textAlign = 'center';
