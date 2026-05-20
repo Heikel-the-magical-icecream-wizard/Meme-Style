@@ -1,2 +1,2 @@
 # Meme-Style
-Sitio web ara buscar y editar memes
+Sitio web para buscar y editar memes
